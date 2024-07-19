@@ -11,7 +11,7 @@ export async function renderVideo<VOpts extends VideoOptions>(
 ) {
     
     return new Promise(res => {
-        const renderProcess = process.spawn("python", [
+        const renderProcess = process.spawn("python3", [
             `src/lib/python/${type.toLowerCase()}.py`, 
             JSON.stringify(options)
         ]);

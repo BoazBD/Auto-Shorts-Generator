@@ -5,3 +5,4 @@ assets
 src/lib/python/__pycache__
 src/lib/python/*/**/__pycache__
 .env
+myenv/
