@@ -1,9 +1,4 @@
-from chess import (
-    Board, 
-    square_name as square_name_of, 
-    parse_square, 
-    PAWN
-)
+from chess import Board, square_name as square_name_of, parse_square, PAWN
 
 import moviepy.editor as editor
 from moviepy.video.fx.resize import resize
@@ -22,32 +17,29 @@ PIECES = {
     "B": "white_bishop",
     "Q": "white_queen",
     "K": "white_king",
-    "P": "white_pawn"
+    "P": "white_pawn",
 }
 
-def slide_to_position(
-    start: tuple[int, int],
-    end: tuple[int, int],
-    duration: int
-):
-    return lambda t : (
+
+def slide_to_position(start: tuple[int, int], end: tuple[int, int], duration: int):
+    return lambda t: (
         start[0] + (min(t, duration) / duration) * (end[0] - start[0]),
-        start[1] + (min(t, duration) / duration) * (end[1] - start[1])
+        start[1] + (min(t, duration) / duration) * (end[1] - start[1]),
     )
 
 
 def get_square(x: int, y: int, flipped: bool = False):
-    return (
-        list("abcdefgh")[(7 - x) if flipped else x]
-        + (str(y + 1) if flipped else str(8 - y))
+    return list("abcdefgh")[(7 - x) if flipped else x] + (
+        str(y + 1) if flipped else str(8 - y)
     )
 
 
 def get_coordinates(square: str, flipped: bool = False, board_width: int = 1080):
     files = list("abcdefgh")
     return (
-        ((7 - files.index(square[0])) if flipped else files.index(square[0])) * (board_width / 8),
-        ((int(square[1]) - 1) if flipped else 8 - int(square[1])) * (board_width / 8)
+        ((7 - files.index(square[0])) if flipped else files.index(square[0]))
+        * (board_width / 8),
+        ((int(square[1]) - 1) if flipped else 8 - int(square[1])) * (board_width / 8),
     )
 
 
@@ -59,16 +51,17 @@ def draw_board(
     brilliancy: bool = False,
     audio: bool = False,
     width: int = 1080,
-    duration: float = 10
-):  
+    duration: float = 10,
+):
     # Board
     board_flip_suffix = "flipped" if flipped else ""
     background = resize(
         (
-            editor.ImageClip(f"{RESOURCES}/board{board_flip_suffix}.png")
-            .set_duration(duration)
+            editor.ImageClip(f"{RESOURCES}/board{board_flip_suffix}.png").set_duration(
+                duration
+            )
         ),
-        newsize=(width, width)
+        newsize=(width, width),
     )
     piece_clips = []
 
@@ -77,7 +70,7 @@ def draw_board(
     # Pieces on the board with animation if requested
     ep_square = None
     ep_fade_square = None
-    
+
     if not board.ep_square is None:
         ep_square = square_name_of(board.ep_square)
         if ep_square[1] == "3":
@@ -97,33 +90,27 @@ def draw_board(
             piece = resize(
                 editor.ImageClip(f"{RESOURCES}/{PIECES[char]}.webp")
                 .set_duration(duration)
-                .set_position((
-                    square_x * (width / 8),
-                    square_y * (width / 8)
-                )),
-                newsize=(
-                    width / 8,
-                    width / 8
-                )
+                .set_position((square_x * (width / 8), square_y * (width / 8))),
+                newsize=(width / 8, width / 8),
             )
 
             square_name = get_square(square_x, square_y, flipped)
             if animated:
                 if square_name == highlighted_move[0:2]:
-                    piece = piece.set_position(slide_to_position(
-                        get_coordinates(square_name, flipped),
-                        get_coordinates(highlighted_move[2:4], flipped),
-                        duration - 0.05
-                    ))
-                elif (
-                    square_name == highlighted_move[2:4]
-                    or (
-                        square_name == ep_fade_square
-                        and highlighted_move[2:4] == ep_square
-                        and board.piece_at(parse_square(highlighted_move[0:2])).piece_type == PAWN
+                    piece = piece.set_position(
+                        slide_to_position(
+                            get_coordinates(square_name, flipped),
+                            get_coordinates(highlighted_move[2:4], flipped),
+                            duration - 0.05,
+                        )
                     )
+                elif square_name == highlighted_move[2:4] or (
+                    square_name == ep_fade_square
+                    and highlighted_move[2:4] == ep_square
+                    and board.piece_at(parse_square(highlighted_move[0:2])).piece_type
+                    == PAWN
                 ):
-                    piece = crossfadeout(piece, duration - 0.05)                    
+                    piece = crossfadeout(piece, duration - 0.05)
 
             piece_clips.append(piece)
 
@@ -136,35 +123,31 @@ def draw_board(
 
         move_highlights = [
             resize(
-                editor.ImageClip(f"{RESOURCES}/{highlight_type}highlight.png") 
+                editor.ImageClip(f"{RESOURCES}/{highlight_type}highlight.png")
                 .set_duration(duration)
                 .set_position(
                     get_coordinates(highlighted_move[i * 2 : i * 2 + 2], flipped)
                 )
                 .set_opacity(0.7 if brilliancy else 0.5),
-
-                newsize=(
-                    width / 8,
-                    width / 8
-                )
-            ) for i in range(2)
+                newsize=(width / 8, width / 8),
+            )
+            for i in range(2)
         ]
 
         classification_icon_size = width / 18
         classification_icon_position = list(
             get_coordinates(highlighted_move[2:4], flipped)
         )
-        classification_icon_position[0] += (width / 8) - (classification_icon_size / 1.5)
+        classification_icon_position[0] += (width / 8) - (
+            classification_icon_size / 1.5
+        )
         classification_icon_position[1] -= classification_icon_size / 3
 
         classification_icon = resize(
             editor.ImageClip(f"{RESOURCES}/brilliant.webp")
             .set_duration(duration)
             .set_position(tuple(classification_icon_position)),
-            newsize=(
-                classification_icon_size, 
-                classification_icon_size
-            )
+            newsize=(classification_icon_size, classification_icon_size),
         )
 
     # Move Audio
@@ -172,15 +155,9 @@ def draw_board(
     if (not highlighted_move is None) and audio:
         highlighted_move_san = board.san(board.parse_uci(highlighted_move))
 
-        result_audio_clips.append(
-            get_move_audio(highlighted_move_san)
-        )
+        result_audio_clips.append(get_move_audio(highlighted_move_san))
 
-    result_video_clips = [
-        background,
-        *move_highlights,
-        *piece_clips
-    ]
+    result_video_clips = [background, *move_highlights, *piece_clips]
 
     if brilliancy:
         result_video_clips.append(classification_icon)
@@ -201,7 +178,7 @@ def draw_move_with_preview(
     audio: bool = False,
     width: int = 1080,
     move_duration: float = 0.2,
-    preview_duration: float = 1
+    preview_duration: float = 1,
 ):
     board = Board(fen)
 
@@ -213,7 +190,7 @@ def draw_move_with_preview(
         brilliancy=brilliancy,
         audio=audio,
         width=width,
-        duration=move_duration
+        duration=move_duration,
     )
 
     board.push_uci(highlighted_move)
@@ -224,13 +201,10 @@ def draw_move_with_preview(
         highlighted_move=highlighted_move,
         brilliancy=brilliancy,
         width=width,
-        duration=preview_duration
+        duration=preview_duration,
     ).set_start(move_duration)
 
-    return editor.CompositeVideoClip([
-        move_board_clip,
-        preview_board_clip
-    ])
+    return editor.CompositeVideoClip([move_board_clip, preview_board_clip])
 
 
 def get_move_audio(move_san: str):

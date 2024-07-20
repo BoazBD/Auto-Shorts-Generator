@@ -65,15 +65,15 @@ def produce_short(
         question_text = (
             editor.TextClip(
                 question["title"],
-                fontsize=90,
+                fontsize=110,
                 color="white",
                 stroke_color="black",
-                stroke_width=2,
+                stroke_width=4,
                 method="caption",
                 size=(1080, None),
                 font=font,
             )
-            .set_position(("center", 0.03), relative=True)
+            .set_position(("center", 0.13), relative=True)
             .set_start(question_index * full_question_duration)
             .set_duration(clip_durations["question"])
         )
@@ -91,22 +91,21 @@ def produce_short(
             (
                 editor.TextClip(
                     f"{list('ABCD')[i]} - {question['answers'][i]}",
-                    fontsize=90,
+                    fontsize=120,
                     color="white",
                     stroke_color="black",
-                    stroke_width=2,
+                    stroke_width=4,
                     method="caption",
                     size=(1080, None),
                     font=font,
                 )
-                .set_position(("center", 0.35 + (i / 7)), relative=True)
+                .set_position(("center", 0.35 + (i / 11)), relative=True)
                 .set_start(question_index * full_question_duration)
                 .set_duration(clip_durations["question"])
             )
             for i in range(len(question["answers"]))
         ]
         clips += answer_texts
-
 
         countdown_texts = [
             (
@@ -115,14 +114,14 @@ def produce_short(
                     fontsize=120,
                     color="white",
                     stroke_color="black",
-                    stroke_width=2,
+                    stroke_width=4,
                     method="caption",
                     size=(1080, None),
                     font=font,
                 )
                 .set_start(question_index * full_question_duration + i)
                 .set_duration(1)
-                .set_position(("center", 0.87), relative=True)
+                .set_position(("center", 0.23), relative=True)
             )
             for i in range(clip_durations["question"])
         ]
@@ -134,7 +133,7 @@ def produce_short(
                 fontsize=120,
                 color="#00ff00",
                 stroke_color="black",
-                stroke_width=2,
+                stroke_width=5,
                 method="caption",
                 size=(1080, None),
                 font=font,
