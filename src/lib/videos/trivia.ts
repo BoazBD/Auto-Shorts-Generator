@@ -50,7 +50,8 @@ export async function produceTriviaShort(output: string, socket: Socket) {
             assets: {
                 background: "src/resources/Trackmania1.mp4",
                 font: "src/resources/Roboto-Black.ttf",
-                music: "src/resources/music/lofi/" + lofiTrackFile
+                music: "src/resources/music/lofi/" + lofiTrackFile,
+                category: questionsCategory
             }
         },
         socket

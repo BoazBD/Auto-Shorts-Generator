@@ -31,7 +31,8 @@ export async function producePuzzleShort(
             assets: {
                 background: "src/resources/gridbackground.png",
                 font: "src/resources/default.ttf",
-                music: "src/resources/music/phonk/" + musicTrack.filename
+                music: "src/resources/music/phonk/" + musicTrack.filename,
+                category: "chess"
             }
         },
         socket

@@ -8,6 +8,7 @@ export interface VideoResources {
     background: string;
     music: string;
     font: string;
+    category: string;
 }
 
 export interface TriviaVideoOptions extends VideoOptions {
