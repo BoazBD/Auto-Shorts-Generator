@@ -30,7 +30,10 @@ def get_country_emoji(title):
     if country_name in country_emojis:
         return country_emojis[country_name]
     else:
-        return country_emojis[' '.join(title.replace("?", "").split(" ")[-2:])]
+        if " ".join(title.replace("?", "").split(" ")[-2:]) in country_emojis:
+            return country_emojis[" ".join(title.replace("?", "").split(" ")[-2:])]
+        else:
+            return country_emojis[" ".join(title.replace("?", "").split(" ")[-3:])]
 
 
 def make_emoji_image(emoji, font_path, font_size):
@@ -115,7 +118,6 @@ def produce_short(
     clips = []
     speech_clips = []
 
-    # Add introductory text at the top
     intro_text = "Test Your Geography IQ!"
     text_clip = (
         editor.TextClip(
@@ -128,37 +130,39 @@ def produce_short(
         .set_position(("center", 0.03 * SIZE[1]))
         .set_duration(full_question_duration * question_count)
     )
-    # Create a semi-transparent background box
-    bg_box = editor.ColorClip(
-        size=(SIZE[0], int(0.155 * SIZE[1])), color=(0, 0, 0)
-    ).set_opacity(0.5).set_position(("center", 0.03 * SIZE[1])).set_duration(full_question_duration * question_count)
+    bg_box = (
+        editor.ColorClip(size=(SIZE[0], int(0.158 * SIZE[1])), color=(0, 0, 0))
+        .set_opacity(0.5)
+        .set_position(("center", 0.03 * SIZE[1]))
+        .set_duration(full_question_duration * question_count)
+    )
 
-    globe_emoji = "🌍"  # You can change this to another globe emoji if preferred
-    emoji_size = 120  # Adjust the size if needed
+    globe_emoji = "🌍"
+    emoji_size = 120
     globe_emoji_image = make_emoji_image(globe_emoji, EMOJI_FONT_PATH, emoji_size)
     emoji_duration = full_question_duration * question_count
-    emoji_start_time = 0  # Start at the beginning of the video
+    emoji_start_time = 0
 
     buffer = 10
+    num_emojis = SIZE[0] // (emoji_size + buffer)
+    total_emoji_width = num_emojis * emoji_size + (num_emojis - 1) * buffer
+    start_x = (SIZE[0] - total_emoji_width) / 2
+
     vertical_position = 0.035 * SIZE[1] + (bg_box.size[1] - emoji_size) / 2 + buffer
 
-    # Create emoji clips for each side of the text
-    left_emoji_clip = create_emoji_clip(
-        (0.25 * SIZE[0], vertical_position),
-        globe_emoji_image,
-        emoji_duration,
-        emoji_start_time,
-    )
-    right_emoji_clip = create_emoji_clip(
-        (0.75 * SIZE[0], vertical_position),
-        globe_emoji_image,
-        emoji_duration,
-        emoji_start_time,
-    )
-    print(f"Emoji vertical position: {vertical_position}")
-    print(f"Background box size: {bg_box.size}")
-    print(f"Emoji size: {emoji_size}")
-    text_with_bg = editor.CompositeVideoClip([bg_box, text_clip, left_emoji_clip, right_emoji_clip])
+    emoji_clips = []
+    for i in range(num_emojis):
+        position_x = start_x + i * (emoji_size + buffer)
+        emoji_clips.append(
+            create_emoji_clip(
+                (position_x, vertical_position),
+                globe_emoji_image,
+                emoji_duration,
+                emoji_start_time,
+            )
+        )
+
+    text_with_bg = editor.CompositeVideoClip([bg_box, text_clip, *emoji_clips])
 
     clips.append(text_with_bg)
 
@@ -195,14 +199,12 @@ def produce_short(
                 (SIZE[0] - emoji_width) / 2,  # Center
             ]
 
-            # Create and append clips
             clips.extend(
                 create_emoji_clips(
                     vertical_margins, positions, emoji_image, duration, start_time
                 )
             )
 
-        # Generate speech for question text
         question_audio_filename = f"out/question_{question_index}.mp3"
         generate_speech(question["title"], question_audio_filename)
         question_audio_clip = editor.AudioFileClip(question_audio_filename).set_start(
@@ -214,15 +216,16 @@ def produce_short(
             (
                 editor.TextClip(
                     f"{list('ABCD')[i]} - {question['answers'][i]}",
-                    fontsize=120 if len(question["answers"][i]) < 12 else 100,
+                    fontsize=120 if len(question["answers"][i]) < 16 else 100,
                     color="white",
                     stroke_color="black",
                     stroke_width=4,
                     method="caption",
                     size=(1080, None),
                     font=font,
+                    align="West",
                 )
-                .set_position(("center", 0.50 + (i / 11)), relative=True)
+                .set_position((0.05 * SIZE[0], 0.50 * SIZE[1] + (i * 170)))
                 .set_start(question_index * full_question_duration)
                 .set_duration(clip_durations["question"])
             )
