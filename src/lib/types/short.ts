@@ -1,4 +1,6 @@
 export enum ShortType {
-    TRIVIA = "trivia",
-    CHESS_PUZZLE = "chess/puzzle"
+    CAPITALS = "capitals",
+    MATH = "math",
+    CHESS_PUZZLE = "chess/puzzle",
+    TRIVIA = "trivia"
 }

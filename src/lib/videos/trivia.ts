@@ -11,11 +11,8 @@ import triviaQuestions from "../../resources/trivia/questions.json";
 
 const QUESTION_COUNT = 3;
 
-export async function produceTriviaShort(output: string, socket: Socket) {
+export async function produceTriviaShort(output: string, socket: Socket, questionsCategory: TriviaCategory) {    
 
-    // Pick a random category of trivia questions
-    
-    const questionsCategory = sample(Object.keys(triviaQuestions)) as TriviaCategory;
     if (!questionsCategory) {
         throw Error("trivia questions file has no defined catgories.");
     }
@@ -48,7 +45,7 @@ export async function produceTriviaShort(output: string, socket: Socket) {
             output: output,
             questions: questions,
             assets: {
-                background: "src/resources/Trackmania1.mp4",
+                background: "src/resources/parkour.mp4",
                 font: "src/resources/Roboto-Black.ttf",
                 music: "src/resources/music/lofi/" + lofiTrackFile,
                 category: questionsCategory

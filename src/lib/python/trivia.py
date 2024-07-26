@@ -10,10 +10,10 @@ from PIL import ImageFont, Image, ImageDraw
 import numpy as np
 from country_emojis import country_emojis
 
-clip_durations = {"question": 7, "answer": 2.5}
-full_question_duration = sum(clip_durations.values())
 EMOJI_FONT_PATH = "/Library/Fonts/NotoColorEmoji.ttf"
 SIZE = (1080, 1920)
+emojis = {"capitals": "🌍", "math": "🧠"}
+titles = {"capitals": "Test Your Geography IQ!", "math": "Test Your Math IQ!"}
 
 
 class Question:
@@ -26,14 +26,15 @@ class Question:
 
 
 def get_country_emoji(title):
-    country_name = title.replace("?", "").split(" ")[-1]
+    title_split = title.replace("?", "").split(" ")
+    country_name = title_split[-1]
     if country_name in country_emojis:
         return country_emojis[country_name]
     else:
-        if " ".join(title.replace("?", "").split(" ")[-2:]) in country_emojis:
-            return country_emojis[" ".join(title.replace("?", "").split(" ")[-2:])]
+        if " ".join(title_split[-2:]) in country_emojis:
+            return country_emojis[" ".join(title_split[-2:])]
         else:
-            return country_emojis[" ".join(title.replace("?", "").split(" ")[-3:])]
+            return country_emojis[" ".join(title_split[-3:])]
 
 
 def make_emoji_image(emoji, font_path, font_size):
@@ -85,6 +86,11 @@ def produce_short(
     font: str,
     output: str,
 ):
+    clip_durations = {"question": 7, "answer": 2}
+    if category == "math":
+        clip_durations["question"] = 8
+
+    full_question_duration = sum(clip_durations.values())
     question_count = len(questions)
 
     background_duration = editor.VideoFileClip(background).duration
@@ -118,10 +124,9 @@ def produce_short(
     clips = []
     speech_clips = []
 
-    intro_text = "Test Your Geography IQ!"
     text_clip = (
         editor.TextClip(
-            intro_text,
+            titles[category],
             fontsize=85,
             color="white",
             font="Arial-Bold",
@@ -137,9 +142,8 @@ def produce_short(
         .set_duration(full_question_duration * question_count)
     )
 
-    globe_emoji = "🌍"
     emoji_size = 120
-    globe_emoji_image = make_emoji_image(globe_emoji, EMOJI_FONT_PATH, emoji_size)
+    globe_emoji_image = make_emoji_image(emojis[category], EMOJI_FONT_PATH, emoji_size)
     emoji_duration = full_question_duration * question_count
     emoji_start_time = 0
 

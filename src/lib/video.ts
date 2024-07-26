@@ -9,7 +9,9 @@ export async function renderVideo<VOpts extends VideoOptions>(
     options: VOpts, // The options to pass to Python
     socket: Socket // The websocket client to send logs to
 ) {
-    
+    if (type === ShortType.CAPITALS || type === ShortType.MATH) {
+        type = ShortType.TRIVIA;
+    }
     return new Promise(res => {
         const renderProcess = process.spawn("python3", [
             `src/lib/python/${type.toLowerCase()}.py`, 

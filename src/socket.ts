@@ -46,8 +46,11 @@ async function produceShort(
     const outputPath = `${outputDirectory}/${outputFilename}`;
 
     switch (type) {
-        case ShortType.TRIVIA:
-            await produceTriviaShort(outputPath, socket);
+        case ShortType.CAPITALS:
+            await produceTriviaShort(outputPath, socket, ShortType.CAPITALS);
+            break;
+        case ShortType.MATH:
+            await produceTriviaShort(outputPath, socket, ShortType.MATH);
             break;
         case ShortType.CHESS_PUZZLE:
             if (data) {
