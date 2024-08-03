@@ -51,6 +51,16 @@
             "correct": 2
         },
         {
+            "title": "What is the capital of Israel?",
+            "answers": [
+                "Tel Aviv",
+                "Haifa",
+                "Jerusalem",
+                "Eilat"
+            ],
+            "correct": 2
+        },
+        {
             "title": "What is the capital of Australia?",
             "answers": [
                 "Sydney",
@@ -79,6 +89,46 @@
                 "Florence"
             ],
             "correct": 2
+        },
+        {
+            "title": "What is the capital of Czech Republic?",
+            "answers": [
+                "Prague",
+                "Brno",
+                "Ostrava",
+                "Plzeň"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Hungary?",
+            "answers": [
+                "Budapest",
+                "Debrecen",
+                "Szeged",
+                "Pécs"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Romania?",
+            "answers": [
+                "Bucharest",
+                "Cluj-Napoca",
+                "Timișoara",
+                "Iași"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Bulgaria?",
+            "answers": [
+                "Sofia",
+                "Plovdiv",
+                "Varna",
+                "Burgas"
+            ],
+            "correct": 0
         },
         {
             "title": "What is the capital of Russia?",
@@ -271,16 +321,6 @@
             "correct": 2
         },
         {
-            "title": "What is the capital of Egypt?",
-            "answers": [
-                "Alexandria",
-                "Cairo",
-                "Giza",
-                "Luxor"
-            ],
-            "correct": 1
-        },
-        {
             "title": "What is the capital of Indonesia?",
             "answers": [
                 "Bali",
@@ -329,11 +369,501 @@
                 "Khiva"
             ],
             "correct": 2
+        },
+        {
+            "title": "What is the capital of Iceland?",
+            "answers": [
+                "Reykjavik",
+                "Akureyri",
+                "Selfoss",
+                "Keflavik"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Portugal?",
+            "answers": [
+                "Porto",
+                "Lisbon",
+                "Faro",
+                "Coimbra"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "What is the capital of Greece?",
+            "answers": [
+                "Thessaloniki",
+                "Patras",
+                "Heraklion",
+                "Athens"
+            ],
+            "correct": 3
+        },
+        {
+            "title": "What is the capital of Sweden?",
+            "answers": [
+                "Gothenburg",
+                "Malmo",
+                "Stockholm",
+                "Uppsala"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "What is the capital of Singapore?",
+            "answers": [
+                "Singapore",
+                "Kuala Lumpur",
+                "Jakarta",
+                "Manila"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Ireland?",
+            "answers": [
+                "Dublin",
+                "Cork",
+                "Limerick",
+                "Galway"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Spain?",
+            "answers": [
+                "Barcelona",
+                "Madrid",
+                "Valencia",
+                "Seville"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "What is the capital of Switzerland?",
+            "answers": [
+                "Zurich",
+                "Geneva",
+                "Basel",
+                "Bern"
+            ],
+            "correct": 3
+        },
+        {
+            "title": "What is the capital of the Netherlands?",
+            "answers": [
+                "Amsterdam",
+                "Rotterdam",
+                "The Hague",
+                "Utrecht"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Belgium?",
+            "answers": [
+                "Antwerp",
+                "Ghent",
+                "Brussels",
+                "Bruges"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "What is the capital of Poland?",
+            "answers": [
+                "Krakow",
+                "Warsaw",
+                "Wroclaw",
+                "Gdansk"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "What is the capital of Austria?",
+            "answers": [
+                "Salzburg",
+                "Innsbruck",
+                "Vienna",
+                "Graz"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "What is the capital of Belarus?",
+            "answers": [
+                "Gomel",
+                "Minsk",
+                "Vitebsk",
+                "Brest"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "What is the capital of Cambodia?",
+            "answers": [
+                "Siem Reap",
+                "Battambang",
+                "Phnom Penh",
+                "Sihanoukville"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "What is the capital of Croatia?",
+            "answers": [
+                "Split",
+                "Dubrovnik",
+                "Zagreb",
+                "Rijeka"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "What is the capital of Estonia?",
+            "answers": [
+                "Tartu",
+                "Narva",
+                "Tallinn",
+                "Parnu"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "What is the capital of Guatemala?",
+            "answers": [
+                "Antigua",
+                "Quetzaltenango",
+                "Guatemala City",
+                "Escuintla"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "What is the capital of Haiti?",
+            "answers": [
+                "Cap-Haitien",
+                "Port-au-Prince",
+                "Les Cayes",
+                "Gonaives"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "What is the capital of Latvia?",
+            "answers": [
+                "Daugavpils",
+                "Liepaja",
+                "Jelgava",
+                "Riga"
+            ],
+            "correct": 3
+        },
+        {
+            "title": "What is the capital of Madagascar?",
+            "answers": [
+                "Toamasina",
+                "Antananarivo",
+                "Fianarantsoa",
+                "Mahajanga"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "What is the capital of Montenegro?",
+            "answers": [
+                "Kotor",
+                "Herceg Novi",
+                "Podgorica",
+                "Budva"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "What is the capital of Nepal?",
+            "answers": [
+                "Pokhara",
+                "Kathmandu",
+                "Lalitpur",
+                "Biratnagar"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "What is the capital of Oman?",
+            "answers": [
+                "Salalah",
+                "Nizwa",
+                "Muscat",
+                "Sohar"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "What is the capital of Papua New Guinea?",
+            "answers": [
+                "Lae",
+                "Madang",
+                "Goroka",
+                "Port Moresby"
+            ],
+            "correct": 3
+        },
+        {
+            "title": "What is the capital of Qatar?",
+            "answers": [
+                "Al Rayyan",
+                "Doha",
+                "Al Khor",
+                "Mesaieed"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "What is the capital of Sierra Leone?",
+            "answers": [
+                "Kenema",
+                "Bo",
+                "Makeni",
+                "Freetown"
+            ],
+            "correct": 3
+        },
+        {
+            "title": "What is the capital of Slovakia?",
+            "answers": [
+                "Kosice",
+                "Nitra",
+                "Bratislava",
+                "Presov"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "What is the capital of Tajikistan?",
+            "answers": [
+                "Khujand",
+                "Khorugh",
+                "Dushanbe",
+                "Kulob"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "What is the capital of Zambia?",
+            "answers": [
+                "Lusaka",
+                "Ndola",
+                "Kitwe",
+                "Livingstone"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Zimbabwe?",
+            "answers": [
+                "Bulawayo",
+                "Gweru",
+                "Mutare",
+                "Harare"
+            ],
+            "correct": 3
+        },
+        {
+            "title": "What is the capital of Algeria?",
+            "answers": [
+                "Oran",
+                "Algiers",
+                "Constantine",
+                "Annaba"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "What is the capital of Angola?",
+            "answers": [
+                "Luanda",
+                "Lobito",
+                "Huambo",
+                "Malanje"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Bolivia?",
+            "answers": [
+                "La Paz",
+                "Sucre",
+                "Santa Cruz",
+                "Cochabamba"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Bosnia and Herzegovina?",
+            "answers": [
+                "Sarajevo",
+                "Banja Luka",
+                "Tuzla",
+                "Zenica"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Botswana?",
+            "answers": [
+                "Gaborone",
+                "Francistown",
+                "Maun",
+                "Selebi-Phikwe"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Cyprus?",
+            "answers": [
+                "Nicosia",
+                "Limassol",
+                "Larnaca",
+                "Famagusta"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Denmark?",
+            "answers": [
+                "Copenhagen",
+                "Aarhus",
+                "Odense",
+                "Aalborg"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Egypt?",
+            "answers": [
+                "Alexandria",
+                "Cairo",
+                "Giza",
+                "Luxor"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "What is the capital of Jordan?",
+            "answers": [
+                "Amman",
+                "Irbid",
+                "Zarqa",
+                "Aqaba"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Kuwait?",
+            "answers": [
+                "Kuwait City",
+                "Hawalli",
+                "Jahra",
+                "Ahmadi"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Lebanon?",
+            "answers": [
+                "Beirut",
+                "Tripoli",
+                "Sidon",
+                "Tyre"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Malta?",
+            "answers": [
+                "Valletta",
+                "Birkirkara",
+                "Sliema",
+                "Mosta"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Monaco?",
+            "answers": [
+                "Monte Carlo",
+                "Monaco",
+                "La Condamine",
+                "Fontvieille"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "What is the capital of Paraguay?",
+            "answers": [
+                "Asunción",
+                "Ciudad del Este",
+                "Encarnación",
+                "Pedro Juan Caballero"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Rwanda?",
+            "answers": [
+                "Kigali",
+                "Butare",
+                "Gisenyi",
+                "Musanze"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Suriname?",
+            "answers": [
+                "Paramaribo",
+                "Nieuw Nickerie",
+                "Brownsweg",
+                "Albina"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Syria?",
+            "answers": [
+                "Damascus",
+                "Aleppo",
+                "Homs",
+                "Latakia"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Togo?",
+            "answers": [
+                "Lomé",
+                "Kara",
+                "Sokodé",
+                "Atakpamé"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "What is the capital of Yemen?",
+            "answers": [
+                "Sana'a",
+                "Aden",
+                "Taiz",
+                "Al Hudaydah"
+            ],
+            "correct": 0
         }
     ],
     "math": [
         {
-            "title": "What is 12 × 13?",
+            "title": "How much is \n12 × 13?",
             "answers": [
                 "156",
                 "169",
@@ -343,7 +873,7 @@
             "correct": 0
         },
         {
-            "title": "What is 23 × 11?",
+            "title": "How much is \n23 × 11?",
             "answers": [
                 "253",
                 "243",
@@ -353,7 +883,7 @@
             "correct": 0
         },
         {
-            "title": "What is 34 × 12?",
+            "title": "How much is \n34 × 12?",
             "answers": [
                 "408",
                 "412",
@@ -363,7 +893,7 @@
             "correct": 2
         },
         {
-            "title": "What is 15 × 15?",
+            "title": "How much is \n15 × 15?",
             "answers": [
                 "225",
                 "235",
@@ -373,7 +903,7 @@
             "correct": 0
         },
         {
-            "title": "What is 19 × 14?",
+            "title": "How much is \n19 × 14?",
             "answers": [
                 "256",
                 "266",
@@ -383,7 +913,7 @@
             "correct": 2
         },
         {
-            "title": "What is 22 × 22?",
+            "title": "How much is \n22 × 22?",
             "answers": [
                 "464",
                 "484",
@@ -393,7 +923,7 @@
             "correct": 1
         },
         {
-            "title": "What is 16 × 16?",
+            "title": "How much is \n16 × 16?",
             "answers": [
                 "236",
                 "246",
@@ -403,7 +933,7 @@
             "correct": 2
         },
         {
-            "title": "What is 25 × 25?",
+            "title": "How much is \n25 × 25?",
             "answers": [
                 "525",
                 "625",
@@ -413,17 +943,17 @@
             "correct": 1
         },
         {
-            "title": "What is 18 × 19?",
+            "title": "How much is \n18 × 19?",
             "answers": [
                 "342",
                 "352",
                 "362",
                 "372"
             ],
-            "correct": 2
+            "correct": 0
         },
         {
-            "title": "What is 17 × 17?",
+            "title": "How much is \n17 × 17?",
             "answers": [
                 "279",
                 "289",
@@ -431,6 +961,706 @@
                 "309"
             ],
             "correct": 1
+        },
+        {
+            "title": "How much is \n28 × 35?",
+            "answers": [
+                "760",
+                "810",
+                "980",
+                "1050"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "How much is \n56 × 12?",
+            "answers": [
+                "512",
+                "576",
+                "602",
+                "672"
+            ],
+            "correct": 3
+        },
+        {
+            "title": "How much is \n24 × 14?",
+            "answers": [
+                "336",
+                "346",
+                "356",
+                "366"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n81 × 8?",
+            "answers": [
+                "618",
+                "628",
+                "648",
+                "688"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "How much is \n19 × 21?",
+            "answers": [
+                "389",
+                "399",
+                "409",
+                "419"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n45 × 23?",
+            "answers": [
+                "935",
+                "1035",
+                "1045",
+                "1055"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n67 × 13?",
+            "answers": [
+                "811",
+                "831",
+                "851",
+                "871"
+            ],
+            "correct": 3
+        },
+        {
+            "title": "How much is \n72 × 19?",
+            "answers": [
+                "1368",
+                "1388",
+                "1408",
+                "1428"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n58 × 17?",
+            "answers": [
+                "976",
+                "986",
+                "996",
+                "1006"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n36 × 29?",
+            "answers": [
+                "1014",
+                "1024",
+                "1034",
+                "1044"
+            ],
+            "correct": 3
+        },
+        {
+            "title": "How much is \n53 × 14?",
+            "answers": [
+                "732",
+                "742",
+                "752",
+                "762"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n47 × 18?",
+            "answers": [
+                "836",
+                "846",
+                "856",
+                "866"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n91 × 15?",
+            "answers": [
+                "1335",
+                "1355",
+                "1365",
+                "1395"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "How much is \n84 × 22?",
+            "answers": [
+                "1788",
+                "1808",
+                "1828",
+                "1848"
+            ],
+            "correct": 3
+        },
+        {
+            "title": "How much is \n34 × 19?",
+            "answers": [
+                "646",
+                "656",
+                "666",
+                "676"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n29 × 23?",
+            "answers": [
+                "637",
+                "647",
+                "657",
+                "667"
+            ],
+            "correct": 3
+        },
+        {
+            "title": "How much is \n48 × 16?",
+            "answers": [
+                "748",
+                "758",
+                "768",
+                "778"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "How much is \n37 × 25?",
+            "answers": [
+                "925",
+                "935",
+                "945",
+                "955"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n52 × 18?",
+            "answers": [
+                "926",
+                "936",
+                "946",
+                "956"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n66 × 17?",
+            "answers": [
+                "1122",
+                "1132",
+                "1142",
+                "1152"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n41 × 29?",
+            "answers": [
+                "1169",
+                "1179",
+                "1189",
+                "1199"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "How much is \n53 × 21?",
+            "answers": [
+                "1103",
+                "1113",
+                "1123",
+                "1133"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n64 × 15?",
+            "answers": [
+                "940",
+                "950",
+                "960",
+                "970"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "How much is \n72 × 19?",
+            "answers": [
+                "1348",
+                "1358",
+                "1368",
+                "1378"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "How much is \n54 × 23?",
+            "answers": [
+                "1232",
+                "1242",
+                "1252",
+                "1262"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n39 × 26?",
+            "answers": [
+                "1004",
+                "1014",
+                "1024",
+                "1034"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n27 × 33?",
+            "answers": [
+                "891",
+                "901",
+                "911",
+                "921"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n62 × 14?",
+            "answers": [
+                "858",
+                "868",
+                "878",
+                "888"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n73 × 18?",
+            "answers": [
+                "1294",
+                "1304",
+                "1314",
+                "1324"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "How much is \n49 × 22?",
+            "answers": [
+                "1048",
+                "1058",
+                "1068",
+                "1078"
+            ],
+            "correct": 3
+        },
+        {
+            "title": "How much is \n38 × 29?",
+            "answers": [
+                "1082",
+                "1092",
+                "1102",
+                "1112"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "How much is \n57 × 13?",
+            "answers": [
+                "741",
+                "751",
+                "761",
+                "771"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n64 × 23?",
+            "answers": [
+                "1462",
+                "1472",
+                "1482",
+                "1492"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n52 × 29?",
+            "answers": [
+                "1498",
+                "1508",
+                "1518",
+                "1528"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n37 × 18?",
+            "answers": [
+                "656",
+                "666",
+                "676",
+                "686"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n49 × 16?",
+            "answers": [
+                "784",
+                "794",
+                "804",
+                "814"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n83 × 21?",
+            "answers": [
+                "1713",
+                "1723",
+                "1733",
+                "1743"
+            ],
+            "correct": 3
+        },
+        {
+            "title": "How much is \n46 × 19?",
+            "answers": [
+                "864",
+                "874",
+                "884",
+                "894"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n31 × 27?",
+            "answers": [
+                "817",
+                "827",
+                "837",
+                "847"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "How much is \n54 × 12?",
+            "answers": [
+                "604",
+                "608",
+                "624",
+                "648"
+            ],
+            "correct": 3
+        },
+        {
+            "title": "How much is \n48 × 14?",
+            "answers": [
+                "652",
+                "662",
+                "672",
+                "682"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "How much is \n35 × 27?",
+            "answers": [
+                "945",
+                "950",
+                "952",
+                "925"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n63 × 22?",
+            "answers": [
+                "1366",
+                "1386",
+                "1356",
+                "1396"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n77 × 13?",
+            "answers": [
+                "980",
+                "1001",
+                "999",
+                "1011"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n52 × 19?",
+            "answers": [
+                "988",
+                "992",
+                "1001",
+                "994"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n84 × 23?",
+            "answers": [
+                "1906",
+                "1940",
+                "1818",
+                "1932"
+            ],
+            "correct": 3
+        },
+        {
+            "title": "How much is \n49 × 36?",
+            "answers": [
+                "1756",
+                "1764",
+                "1784",
+                "1746"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n56 × 28?",
+            "answers": [
+                "1556",
+                "1568",
+                "1586",
+                "1548"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n73 × 41?",
+            "answers": [
+                "2983",
+                "3001",
+                "3021",
+                "2993"
+            ],
+            "correct": 3
+        },
+        {
+            "title": "How much is \n65 × 33?",
+            "answers": [
+                "2135",
+                "2145",
+                "2155",
+                "2165"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n89 × 47?",
+            "answers": [
+                "4173",
+                "4183",
+                "4233",
+                "4213"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n61 × 52?",
+            "answers": [
+                "3172",
+                "3182",
+                "3192",
+                "3222"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n77 × 88?",
+            "answers": [
+                "6766",
+                "6776",
+                "6786",
+                "6796"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n66 × 54?",
+            "answers": [
+                "3554",
+                "3564",
+                "3574",
+                "3584"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n95 × 43?",
+            "answers": [
+                "4085",
+                "4095",
+                "4105",
+                "4115"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n15 × 12?",
+            "answers": [
+                "170",
+                "180",
+                "190",
+                "200"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n23 × 11?",
+            "answers": [
+                "243",
+                "253",
+                "233",
+                "253"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n14 × 16?",
+            "answers": [
+                "224",
+                "214",
+                "234",
+                "244"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n21 × 13?",
+            "answers": [
+                "273",
+                "263",
+                "253",
+                "243"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n18 × 17?",
+            "answers": [
+                "306",
+                "316",
+                "296",
+                "286"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n25 × 12?",
+            "answers": [
+                "290",
+                "310",
+                "300",
+                "280"
+            ],
+            "correct": 2
+        },
+        {
+            "title": "How much is \n16 × 14?",
+            "answers": [
+                "234",
+                "224",
+                "214",
+                "244"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n19 × 13?",
+            "answers": [
+                "267",
+                "257",
+                "237",
+                "247"
+            ],
+            "correct": 3
+        },
+        {
+            "title": "How much is \n22 × 11?",
+            "answers": [
+                "242",
+                "252",
+                "232",
+                "222"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n13 × 15?",
+            "answers": [
+                "195",
+                "185",
+                "175",
+                "165"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n24 × 12?",
+            "answers": [
+                "288",
+                "278",
+                "298",
+                "268"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n17 × 14?",
+            "answers": [
+                "228",
+                "238",
+                "248",
+                "258"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n21 × 15?",
+            "answers": [
+                "315",
+                "305",
+                "295",
+                "285"
+            ],
+            "correct": 0
+        },
+        {
+            "title": "How much is \n18 × 12?",
+            "answers": [
+                "206",
+                "216",
+                "226",
+                "236"
+            ],
+            "correct": 1
+        },
+        {
+            "title": "How much is \n22 × 15?",
+            "answers": [
+                "290",
+                "310",
+                "330",
+                "350"
+            ],
+            "correct": 2
         }
     ]
 }
